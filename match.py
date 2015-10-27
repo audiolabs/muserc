@@ -145,9 +145,9 @@ def cut(cuts, audio, sensor, outdir, verbose):
             sf_version = int(sf.__version__.replace(".", ""))
 
             if sf_version < 80:
-                sf.write(d_audio, name_audio, samplerate=fs)
+                sf.write(d_audio, name_audio, samplerate=fs, subtype='PCM_16')
             else:
-                sf.write(name_audio, d_audio, samplerate=fs)
+                sf.write(name_audio, d_audio, samplerate=fs, subtype='PCM_16')
 
         data = np.column_stack((sensor_t,
                                 n_audio,
