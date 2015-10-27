@@ -7,12 +7,29 @@ Pre-process the raw MUSERC dataset so that
 
 ## Audio 
 
+* recorded using AKG C414 
+* Samplingrate 48000 Hz
+* Raw data: 24bit uncompressed mono PCM
+* Pre-Processed Data: 16 bit uncompressed mono PCM
+
 ## Video 
+
+* High speed camera (2000 fps)
+* Focusing on the string to extract the movement pattern
+* Resolution 1024x768
+* Raw data: H264 lossless mode
+* Pre-Processed Data: H264 lossy compression
 
 ## Sensors
 
+* To measure the finger position, we used a linear membrane potentiometer.
+* Recorded using 12bit D/A at 750 Hz.
+
 ## Howto run the pre-processing
 
+* install requirements ```pip install -r requirements.txt````
+* for video processing install ffmpeg
+* run ```make```
 
 ## Authors
 
