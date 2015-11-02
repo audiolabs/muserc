@@ -14,7 +14,8 @@ fetchdata:
 	$(MAKE) -C data fetchdata
 
 rendervideos:
-	sh rendervideos.sh
+	test ! -f "output/muserc_sav_pre/muserc_sav/pro_51_f_vib_compressed_realtime_60fps.mp4"
+	sh render_videos.sh
 
 # create sensor/audio dataset
 sa:

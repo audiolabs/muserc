@@ -5,14 +5,8 @@ trap "exit 1" 2 # catch SIGINT
 dir=$(dirname "$0")
 cd "$dir"
 
-outroot="output/muserc_sav_pre"
-
-if [ ! -d "${outroot}" ]; then
-  mkdir "${outroot}"
-fi
-
-# setup log
-output="output/muserc_sa_pre/muserc_sav"
+# setup dirs
+output="output/muserc_sav_pre/muserc_sav"
 
 if [ ! -d "${output}" ]; then
   mkdir "${output}"
@@ -30,7 +24,6 @@ all_opts=("-pix_fmt" "yuv420p" "-y")
 input1="data/muserc_sensor_audio_video_raw/G120002_001_001.mp4"
 
 echo "processing $input1..."
-file="`basename $input1`"
 base="${output}/amateur_51_m_vib"
 
 sharpened1="${base}_sharpened.mp4"
@@ -55,7 +48,6 @@ ffmpeg -i "$compressed1" "${realtime_opt[@]}" "${all_opts[@]}" "$realtime1"
 input2="data/muserc_sensor_audio_video_raw/G120002_002_001.mp4"
 
 echo "processing $input2..."
-file="`basename $input2`"
 base="${output}/pro_51_f_vib"
 
 sharpened2="${base}_sharpened.mp4"
