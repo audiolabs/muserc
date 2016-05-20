@@ -2,9 +2,7 @@
 
 URLBASE=https://www.audiolabs-erlangen.de/content/resources/muserc
 FILES=\
-	muserc_sensor_audio_raw.tar.gz.md5 \
 	muserc_sensor_audio_raw.tar.gz \
-	muserc_sensor_audio_video_raw.tar.gz.md5 \
 	muserc_sensor_audio_video_raw.tar.gz
 
 %.tar.gz %.tar.gz.md5:
