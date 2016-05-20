@@ -9,7 +9,7 @@ cd "$dir"
 output="output/muserc_sav_pre/muserc_sav"
 
 if [ ! -d "${output}" ]; then
-  mkdir "${output}"
+  mkdir -p "${output}"
 fi
 
 sharpend_opt=("-filter:v" "unsharp=5:5:1.5:5:5:1.0,eq=contrast=3.2:brightness=0.9:gamma=1.8:gamma_g=0.95:saturation=1.1" "-c:v" "libx264" "-crf" "0" "-preset" "veryslow")
