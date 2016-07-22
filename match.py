@@ -116,6 +116,9 @@ def cut(cuts, audio, sensor, outdir, verbose):
 
     for n, i, o in cuts:
 
+        i = int(i)
+        o = int(o)
+
         d_audio = audio[i:o]
 
         i64 = i / 64
